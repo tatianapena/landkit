@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Roboto";
+}
+
+
+$sm: 640px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0.25rem;
+
+  @media (min-width: $sm) {
+    max-width: $sm;
+  }
+  @media (min-width: $md) {
+    max-width: $md;
+  }
+  @media (min-width: $lg) {
+    max-width: $lg;
+  }
+  @media (min-width: $xl) {
+    max-width: $xl;
+  }
+  @media (min-width: $xxl) {
+    max-width: $xxl;
+  }
+}
