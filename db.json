@@ -1,0 +1,94 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$55/Month",
+      "title": "Phasellus volutpat libero eu pretium laoreet.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "avatar": "https://randomuser.me/api/portraits/woman/1.jpg",
+      "name": "ALIVE COOPER",
+      "date": "January 21"
+    },
+    {
+      "id": 2,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$17/Month",
+      "title": "Curabitur ornare ipsum ac tempor sagittis.",
+      "description": "Maecenas at libero pellentesque, elementum nisi at, pharetra tortor...",
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+      "name": "JASON MORRIS",
+      "date": "February 21"
+    },
+    {
+      "id": 3,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$35/Month",
+      "title": "Proin ac nisl convallis, viverra leo nec, blandit erat.",
+      "description": "IMaecenas venenatis magna risus, id facilisis lacus congue in...",
+      "avatar": "https://randomuser.me/api/portraits/woman/3.jpg",
+      "name": "ELLA FAY",
+      "date": "March 21"
+    },
+    {
+      "id": 4,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$83/Month",
+      "title": "Donec nec augue aliquam, vehicula nunc at, tincidunt dolor.",
+      "description": "Praesent accumsan aliquam orci at commodo...",
+      "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
+      "name": "JERROD BRANDON",
+      "date": "April 21"
+    },
+    {
+      "id": 5,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$76/Month",
+      "title": "Donec tincidunt ex sit amet metus interdum maximus.",
+      "description": "Maecenas nec metus eu diam tincidunt iaculis...",
+      "avatar": "https://randomuser.me/api/portraits/woman/5.jpg",
+      "name": "MARLEEN DAWSON",
+      "date": "May 21"
+    },
+    {
+      "id": 6,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$28/Month",
+      "title": "Nam ultrices lorem id metus scelerisque euismod.",
+      "description": "Sed magna ipsum, imperdiet a enim sit amet, pretium commodo turpis...",
+      "avatar": "https://randomuser.me/api/portraits/men/6.jpg",
+      "name": "DAVIS SAMSON",
+      "date": "June 21"
+    },
+    {
+      "id": 7,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$49/Month",
+      "title": "Sed vehicula ligula quis consequat tincidunt.",
+      "description": "Vestibulum orci neque, placerat non gravida vel, imperdiet eget sem...",
+      "avatar": "https://randomuser.me/api/portraits/woman/7.jpg",
+      "name": "LILLY CARVER",
+      "date": "July 21"
+    },
+    {
+      "id": 8,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$67/Month",
+      "title": "Fusce et nibh vestibulum, ullamcorper metus sit amet, lacinia ipsum.",
+      "description": "Nam justo sapien, aliquam sed lacus non, convallis vulputate metus...",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "name": "LUKA WEAVER",
+      "date": "August 21"
+    },
+    {
+      "id": 9,
+      "image": "https://picsum.photos/640/426",
+      "price": "USD$80/Month",
+      "title": "In non erat fringilla, tristique massa ac, dictum erat.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit amet non augue...",
+      "avatar": "https://randomuser.me/api/portraits/woman/9.jpg",
+      "name": "KYLEE HOLT",
+      "date": "September 21"
+    }
+  ]
+}
