@@ -1,0 +1,36 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding: 20px 5px;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.search :hover > .content__text {
+  width: 190px;
+}
+
+.content {
+  display: flex;
+  margin-top: 5px;
+}
+
+.content__text {
+  outline: none;
+  border: none;
+  margin-left: 5px;
+}
+
+.content__text::placeholder {
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 10px;
+}
+
+.results {
+  margin-top: 15px;
+}
+
+.results__text {
+  font-size: 17px;
+}
