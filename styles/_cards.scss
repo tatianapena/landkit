@@ -6,7 +6,11 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  &__image {
+    display: flex;
+  }
   &__photo {
+    display: block;
     width: 100%;
     clip-path: polygon(82% 91%, 64% 95%, 46% 97%, 30% 98%, 16% 98%, 0 97%, 0 0, 100% 0, 100% 85%);
   }
@@ -38,6 +42,7 @@
     line-height: 28px;
     letter-spacing: -0.01em;
     padding: 0 25.71px;
+    overflow-y: hidden;
   }
   &__paragraph {
     margin-top: 12px;
@@ -45,6 +50,7 @@
     line-height: 24px;
     color:$gray;
     padding: 0 25.71px;
+    overflow-y: hidden;
   }
   &__footer {
     display: flex;
@@ -57,7 +63,6 @@
   }
   &__sign {
     display: flex;
-    margin-right: 2rem;
     align-items: center;
   }
   &__avatar {
@@ -84,28 +89,24 @@
     letter-spacing: 0.07em;
   }
   &__btn {
+    padding: 0 20px;
     cursor: pointer;
     margin-top: 3.5rem;
-    border: 1px solid blue;
+    border: 1px solid $dark-blue;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
   }
   &__link {
+    margin: auto;
     text-decoration: none;
-    margin-left: 5rem;
     font-weight: 900;
     font-size: 17px;
     line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: $dark-blue;
   }
   &__follow {
-    width: 20px;
     display: flex;
-    margin-left: 4rem;
   }
   &__arrow {
     display: block;   
@@ -145,7 +146,7 @@
   }
 
   .card__paragraph {
-    max-width: 252.73px;
+    max-width: 15.7956rem;
   }
 
   .card__name {
@@ -159,7 +160,6 @@
   .card__follow {
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: 4rem;
   }
 
   .card__link {
@@ -167,9 +167,6 @@
     font-weight: 900;
     font-size: 17px;
     line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: $dark-blue;
   }
 }

@@ -1,105 +1,159 @@
-const stickyHeader = document.querySelector(".js-sticky")
-const result = document.querySelector(".js-totalResults")
-const searchInput = document.querySelector(".js-search")
-const articles = document.querySelector(".articles")
-// let bodyElement = document.body;
-// let cardElement = document.createElement('section');
-// let containerElement = document.createElement('div');
-// let cardContainer = document.createElement('div');
-// let cardHeader = document.createElement('div');
-// let cardFavorite = document.createElement('div');
-// let cardStar = document.createElement('img');
-// let cardPrice = document.createElement('div');
-// let cardValue = document.createElement('p');
-// let cardImage = document.createElement('div');
-// let cardPhoto = document.createElement('img');
-// let cardTitle = document.createElement('h5');
-// let cardParagraph = document.createElement('p');
-// let cardFooter = document.createElement('div');
-// let cardSign = document.createElement('div');
-// let cardAvatar = document.createElement('img');
-// let cardName = document.createElement('p');
-// let cardDate = document.createElement('time');
-// let cardBtn =document.createElement('div');
-// let cardLink = document.createElement('a');
-// let cardArrow = document.createElement('img');
+const stickyHeader = document.querySelector(".js-sticky");
+const result = document.querySelector(".js-totalResults");
+const searchInput = document.querySelector(".js-search");
+const loadButton = document.querySelector(".js-loadMoreBtn");
 
+let queryInfo = {
+  offset: 0,
+  limit: 6,
+  previousArticles: []
+}
 
-// cardElement.className ='card';
-// containerElement.className ='container';
-// cardContainer.className ='card__container';
-// cardHeader.className ='card__header';
-// cardFavorite.className ='card__favorite';
-// cardStar.src ='./assets/Star-fill.png';
-// cardStar.setAttribute("alt","fill star");
-// cardPrice.className ='card__price';
-// cardValue.className ='card__value';
-// cardValue.innerText ='$49/mo';
-// cardImage.className ='card__image';
-// cardPhoto.src ='https://picsum.photos/640/426';
-// cardPhoto.setAttribute("alt", "random image");
-// cardTitle.className ='card__title';
-// cardTitle.innerText ='Keeping the dream alive by traveling the world.';
-// cardParagraph.className ='card__paragraph';
-// cardParagraph.innerText = 'Integrate the latest technologies with an innovative platform...';
-// cardFooter.className ='card__footer';
-// cardSign.className ='card__sign';
-// cardAvatar.src ='https://randomuser.me/';
-// cardAvatar.setAttribute("alt", "random avatar image"),
-// cardName.className ='card__name';
-// cardName.innerText ='ALIVE COOPER';
-// cardDate.className ='card__date';
-// cardDate.innerText ='MAY 02';
-// cardBtn.className ='card__btn';
-// cardLink.className ='card__link';
-// cardLink.setAttribute("href", "#");
-// cardLink.innerText = 'Load more';
-// cardArrow.src ="./assets/arrow.png";
-
-
-// bodyElement.appendChild(cardElement);
-// cardElement.append(cardImage, cardPhoto);
-
-
-
+loadButton.addEventListener('click', getMoreArticles);
 document.addEventListener("DOMContentLoaded", async function() {
-  const articlesData = await fetchData();
-  drawArticles(articlesData);
+  await getMoreArticles();
 });
 
-function drawArticles(articlesData){
-  let resultHtml = "";
-  
-  if (articlesData.length !== 0) {
-    result.innerHTML = `${articlesData.length} RESULTS`;
-    articlesData.forEach(article => resultHtml += drawArticle(article))
-  } else {
-    result.innerHTML = "NO RESULTS";
-    resultHtml = drawNoResults();
-  }
-
-  articles.innerHTML = resultHtml;
+async function getMoreArticles() {
+  const articlesData = await fetchData();
+  getArticles(articlesData, queryInfo);
+  createArticles(queryInfo.previousArticles);
 }
 
-function drawArticle(article){
-  if (article.favorite !== undefined && article.favorite) {
-    // es favorito
-  }
+function getArticles(articlesData, query) {
+  const result = articlesData.splice(query.offset, query.limit);
+  query.offset += query.limit;
+  query.previousArticles.push(...result);
 
-  return `<h1> ${article.title} </h1>`
+  return result
 }
 
-function drawNoResults() {
-  return "<h1>No results</h1>"
+function createArticles(articlesData){
+  const cardPrefix = "card__";
+  const cardsContainer = document.querySelector(".js-cardsContainer");
+  cardsContainer.innerHTML = '';
+  articlesData.forEach(article => {
+    cardsContainer.append(createArticle(cardPrefix, article));
+  });
+  result.innerHTML = `${articlesData.length} RESULTS`;
+}
+
+function createArticle(cardPrefix, article){
+  const card = document.createElement("div")
+  card.className = "card";
+
+  card.append(createCardHeader(cardPrefix, article));
+  card.append(createCardFooter(cardPrefix, article));
+
+  return card;
+}
+
+function createCardHeader(cardPrefix, article) {
+  const mainDiv = createElementWithClass("div", `${cardPrefix}header`)
+
+  const favoriteDiv = createElementWithClass("div", `${cardPrefix}favorite`);
+
+  let src = "./assets/Star.png";
+  if (article.favorite !== undefined && article.favorite === true) {
+    src = "./assets/Star-fill.png"
+  }
+
+  const imgAttributes = [{name: "src", value: src}, {name: "alt", value: "fill start"}];
+  const imgFavorite = createElementWithClass("img", "card__star", imgAttributes);
+  imgFavorite.classList.add("js-favoriteToggle")
+  imgFavorite.addEventListener('click', async function (e) {
+    await setFavorite(e.target, article)
+  })
+  favoriteDiv.append(imgFavorite);
+
+  const priceDiv = createElementWithClass("div", "card__price");
+  const pPrice = createElementWithClass("p", "card__value");
+  pPrice.innerText = article.price;
+  priceDiv.append(pPrice);
+
+  const imageDiv = createElementWithClass("div", `${cardPrefix}image`);
+  const imgAttributes2 = [{name: "src", value: article.image}, {name: "alt", value: "random image"}];
+  const img = createElementWithClass("img", `${cardPrefix}photo`, imgAttributes2);
+  imageDiv.append(img);
+
+  const titleDiv = createElementWithClass("div", `${cardPrefix}title`);
+  const textTitle = createElementWithClass("h2");
+  textTitle.innerText = article.title;
+  titleDiv.append(textTitle);
+
+  const paragraphDiv = createElementWithClass("div", `${cardPrefix}paragraph`);
+  const textParagraph = createElementWithClass("p");
+  textParagraph.innerText = article.description;
+  paragraphDiv.append(textParagraph);
+
+  mainDiv.append(favoriteDiv, priceDiv, imageDiv, titleDiv, paragraphDiv);
+  return mainDiv
+}
+
+function createCardFooter(cardPrefix, article) {
+  const mainDiv = createElementWithClass("div", `${cardPrefix}footer`);
+
+  const signDiv = createElementWithClass("div", `${cardPrefix}sign`);
+  const imgAttrs = [
+    {
+      name: 'alt',
+      value: 'random avatar image'
+    },
+    {
+      name: 'src',
+      value: article.avatar
+    }
+  ];
+  const avatarImg = createElementWithClass("img", `${cardPrefix}avatar`, imgAttrs);
+  const p = createElementWithClass("p", `${cardPrefix}name`);
+  p.innerText = article.name;
+  signDiv.append(avatarImg, p);
+
+  const dateDiv = createElementWithClass("div", `${cardPrefix}date`);
+  const time = createElementWithClass("time", "", [{name: 'dateTime', value: article.date}]);
+  time.innerText = article.date;
+  dateDiv.append(time);
+
+  mainDiv.append(signDiv, dateDiv);
+  return mainDiv;
+}
+
+function createElementWithClass(tagName, className, attributes) {
+  const element = document.createElement(tagName);
+  element.className = className;
+
+  if (attributes !== undefined) {
+    attributes.forEach(attribute => {
+      element.setAttribute(attribute.name, attribute.value);
+    });
+  }
+
+  return element;
 }
 
 async function searchInputChanged(e) {
+  queryInfo = {
+    offset: 0,
+    limit: 6,
+    previousArticles: [],
+  }
+
   console.log(e.target.value);
   const data = await fetchData();
-  console.log({ data })
   const searchResult = search(e.target.value,data)
-  console.log(searchResult)
-  drawArticles(searchResult);
+  createArticles(searchResult);
+}
+
+async function setFavorite(element, article) {
+  const src = element.src.includes("fill") ? "Star" : "Star-fill";
+  element.src = `./assets/${src}.png`;
+
+  const isFavorite = element.src.includes("fill");
+  await setArticleFavorite(article, isFavorite);
+}
+
+async function getFavorites(articlesData) {
+  return articlesData.filter(article => article.favorite === true);
 }
 
 searchInput.oninput = searchInputChanged 
@@ -117,6 +171,22 @@ function search(query, articles) {
   })
 }
 
+async function setArticleFavorite(article, isFavorite) {
+  article.favorite = isFavorite;
+  const xhr = new XMLHttpRequest();
+  const url = `http://localhost:3000/articles/${article.id}`;
+  xhr.open("PUT", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 201) {
+      const json = JSON.parse(xhr.responseText);
+      console.log(json);
+    }
+  };
+  const data = JSON.stringify(article);
+  xhr.send(data);
+}
+
 
 // function for header sticky
 window.onscroll = function() {stickyController()};
@@ -125,7 +195,7 @@ function stickyController() {
   if (window.pageYOffset > sticky) {
     stickyHeader.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+    stickyHeader.classList.remove("sticky");
   }
 }
 
