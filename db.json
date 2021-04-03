@@ -2,93 +2,236 @@
   "articles": [
     {
       "id": 1,
-      "image": "https://picsum.photos/640/426",
-      "price": "USD$55/Month",
+      "image": "https://i.picsum.photos/id/1015/640/426.jpg?hmac=rCqb9RwkSR9-x-ptRYVhK02SAv3_YRGtMYxlpwkRetM",
+      "price": "$55/MO",
       "title": "Phasellus volutpat libero eu pretium laoreet.",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      "avatar": "https://randomuser.me/api/portraits/woman/1.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elitfdaesr...",
+      "avatar": "https://randomuser.me/api/portraits/women/1.jpg",
       "name": "ALIVE COOPER",
-      "date": "January 21"
+      "date": "JAN 21",
+      "favorite": false,
+      "links": [
+        {
+          "name": "facebook",
+          "value": "facebook.com/mi,app"
+        }
+      ],
+      "body": "123123 123 12 3 123 123 12 3 123"
     },
     {
       "id": 2,
-      "image": "https://picsum.photos/640/426",
-      "price": "USD$17/Month",
-      "title": "Curabitur ornare ipsum ac tempor sagittis.",
-      "description": "Maecenas at libero pellentesque, elementum nisi at, pharetra tortor...",
+      "image": "https://i.picsum.photos/id/469/640/426.jpg?hmac=Yb6YpPD1iAmPKyHINpM5eexLRHNsyjVx7hJntG73ylk",
+      "price": "$17/MO",
+      "title": "Curabitur ornare ipsum ac tempor sagittisgyu.",
+      "description": "Maecenas at libero pellentesque, elementum nisi at pharetraza...",
       "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
       "name": "JASON MORRIS",
-      "date": "February 21"
+      "date": "FEB 21",
+      "favorite": false
     },
     {
       "id": 3,
-      "image": "https://picsum.photos/640/426",
-      "price": "USD$35/Month",
-      "title": "Proin ac nisl convallis, viverra leo nec, blandit erat.",
-      "description": "IMaecenas venenatis magna risus, id facilisis lacus congue in...",
-      "avatar": "https://randomuser.me/api/portraits/woman/3.jpg",
-      "name": "ELLA FAY",
-      "date": "March 21"
+      "image": "https://i.picsum.photos/id/157/640/426.jpg?hmac=2S1eDUMoINxd80sA9ntPOx-lWVilliICOWMEB09wlKY",
+      "price": "$35/MO",
+      "title": "Proin ac nisl convallis, viverra leo nec, blan.",
+      "description": "Imaecenas venenatis magna risus, id facilisis lacus congue ina...",
+      "avatar": "https://randomuser.me/api/portraits/women/3.jpg",
+      "name": "ELLA FAYTAHE",
+      "date": "MAR 21",
+      "favorite": true
     },
     {
       "id": 4,
-      "image": "https://picsum.photos/640/426",
-      "price": "USD$83/Month",
-      "title": "Donec nec augue aliquam, vehicula nunc at, tincidunt dolor.",
-      "description": "Praesent accumsan aliquam orci at commodo...",
+      "image": "https://i.picsum.photos/id/800/640/426.jpg?hmac=6fz80BkznZFzqEVHjwrfPtU9OGHMZA9nTcx0sVg9us4",
+      "price": "$83/MO",
+      "title": "Donec nec augue aliquam, vehicula nunc at, tin.",
+      "description": "Praesent accumsan aliquam orci at commodoass adre hayra hahyay...",
       "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
-      "name": "JERROD BRANDON",
-      "date": "April 21"
+      "name": "JERROD BRAND",
+      "date": "APR 21",
+      "favorite": true
     },
     {
       "id": 5,
-      "image": "https://picsum.photos/640/426",
-      "price": "USD$76/Month",
-      "title": "Donec tincidunt ex sit amet metus interdum maximus.",
-      "description": "Maecenas nec metus eu diam tincidunt iaculis...",
-      "avatar": "https://randomuser.me/api/portraits/woman/5.jpg",
-      "name": "MARLEEN DAWSON",
-      "date": "May 21"
+      "image": "https://i.picsum.photos/id/825/640/426.jpg?hmac=kOddbebiolgTfM3z99E0sK6pMWvJGbojaC35LMTJRZA",
+      "price": "$76/MO",
+      "title": "Donec tincidunt ex sit amet metus interdum max.",
+      "description": "Maecenas nec metus eu diam tincidunt iaculiszc adwdd adwfvvv as...",
+      "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
+      "name": "MARLEEN DAWS",
+      "date": "MAY 21",
+      "favorite": true
     },
     {
       "id": 6,
-      "image": "https://picsum.photos/640/426",
-      "price": "USD$28/Month",
-      "title": "Nam ultrices lorem id metus scelerisque euismod.",
-      "description": "Sed magna ipsum, imperdiet a enim sit amet, pretium commodo turpis...",
+      "image": "https://i.picsum.photos/id/849/640/426.jpg?hmac=wuG_3NR06_usvvuIk_EjQaU7jdBgCqLfGBJLc5dqAN0",
+      "price": "$28/MO",
+      "title": "Nam ultrices lorem id metus scelerisque euism.",
+      "description": "Sed magna ipsum, imperdiet a enim sit amet, pretium commodo turp...",
       "avatar": "https://randomuser.me/api/portraits/men/6.jpg",
       "name": "DAVIS SAMSON",
-      "date": "June 21"
+      "date": "JUN 21",
+      "favorite": true
     },
     {
       "id": 7,
       "image": "https://picsum.photos/640/426",
-      "price": "USD$49/Month",
+      "price": "$49/MO",
       "title": "Sed vehicula ligula quis consequat tincidunt.",
-      "description": "Vestibulum orci neque, placerat non gravida vel, imperdiet eget sem...",
-      "avatar": "https://randomuser.me/api/portraits/woman/7.jpg",
+      "description": "Vestibulum orci neque, placerat non gravida vel, imperdiet ege...",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
       "name": "LILLY CARVER",
-      "date": "July 21"
+      "date": "JUL 21"
     },
     {
       "id": 8,
       "image": "https://picsum.photos/640/426",
-      "price": "USD$67/Month",
-      "title": "Fusce et nibh vestibulum, ullamcorper metus sit amet, lacinia ipsum.",
-      "description": "Nam justo sapien, aliquam sed lacus non, convallis vulputate metus...",
+      "price": "$67/MO",
+      "title": "Fusce et nibh vestibulum ullamcorper metus sa.",
+      "description": "Nam justo sapien aliquam sed lacus non convallis vulputate metu...",
       "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
-      "name": "LUKA WEAVER",
-      "date": "August 21"
+      "name": "LUKA WEAVERS",
+      "date": "AUG 21"
     },
     {
       "id": 9,
       "image": "https://picsum.photos/640/426",
-      "price": "USD$80/Month",
-      "title": "In non erat fringilla, tristique massa ac, dictum erat.",
-      "description": "Morbi sed dui in mi imperdiet malesuada sit amet non augue...",
-      "avatar": "https://randomuser.me/api/portraits/woman/9.jpg",
-      "name": "KYLEE HOLT",
-      "date": "September 21"
+      "price": "$80/MO",
+      "title": "In non erat fringilla tristique massa dictum e.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit a...",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "name": "KYLEE HOLTS",
+      "date": "SEP 21"
+    },
+    {
+      "id": 10,
+      "image": "https://picsum.photos/640/426",
+      "price": "$49/MO",
+      "title": "Sed vehicula ligula quis consequat tincidunt.",
+      "description": "Vestibulum orci neque placerat non gravidsd imperdiet eget sem...",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
+      "name": "LILLY CARVER",
+      "date": "JUL 21"
+    },
+    {
+      "id": 11,
+      "image": "https://picsum.photos/640/426",
+      "price": "$67/MO",
+      "title": "Fusce et nibh vestibulum ullamc lacinia ipsum.",
+      "description": "Nam justo sapien, aliquam sed lacus non, convallis vulputate me...",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "name": "LUKA WEAVERA",
+      "date": "AUG 21"
+    },
+    {
+      "id": 12,
+      "image": "https://picsum.photos/640/426",
+      "price": "$80/MO",
+      "title": "In non erat fringilla tristique massa ac d erat.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit amet non auguea hyafr...",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "name": "KYLEE HOLTAS",
+      "date": "SEP 21"
+    },
+    {
+      "id": 13,
+      "image": "https://picsum.photos/640/426",
+      "price": "$49/MO",
+      "title": "Sed vehicula ligula quis consequat tincidunt.",
+      "description": "Vestibulum orci neque placera non gravida vela imperdiet egets...",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
+      "name": "LILLY CARVER",
+      "date": "JUL 21"
+    },
+    {
+      "id": 14,
+      "image": "https://picsum.photos/640/426",
+      "price": "$67/MO",
+      "title": "Fusce et nibh vestibulum ullamcorper metus si.",
+      "description": "Nam justo sapien aliquam sed lacus non convallis vulputat metus...",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "name": "LUKA WEAVERS",
+      "date": "AUG 21"
+    },
+    {
+      "id": 15,
+      "image": "https://picsum.photos/640/426",
+      "price": "$80/MO",
+      "title": "In non erat fringilla tristique massa ac dictu.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit amet non augue gtfarf...",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "name": "KYLEE HOLTUT",
+      "date": "SEP 21"
+    },
+    {
+      "id": 16,
+      "image": "https://picsum.photos/640/426",
+      "price": "$49/MO",
+      "title": "Sed vehicula ligula quis consequat tincidunt.",
+      "description": "Vestibulum orci neque placerat non gravida vel imperdiet egeta...",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
+      "name": "LILLY CARVER",
+      "date": "JUL 21"
+    },
+    {
+      "id": 17,
+      "image": "https://picsum.photos/640/426",
+      "price": "$67/MO",
+      "title": "Fusce et nibh vestibulum ullamc lacinia ipsum.",
+      "description": "Nam justo sapien aliquam sed lacus non convallis vulputate meht...",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "name": "LUKA WEAVERR",
+      "date": "AUG 21"
+    },
+    {
+      "id": 18,
+      "image": "https://picsum.photos/640/426",
+      "price": "$80/MO",
+      "title": "In non erat fringilla tristique massa ac dictu.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit amet non augueft hyat...",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "name": "KYLEE HOLTTK",
+      "date": "SEP 21"
+    },
+    {
+      "id": 19,
+      "image": "https://picsum.photos/640/426",
+      "price": "$80/MO",
+      "title": "In non erat fringilla tristique madictum erat.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit amet augue gtraj hgat...",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "name": "KYLEE WOLTHG",
+      "date": "SEP 21"
+    },
+    {
+      "id": 20,
+      "image": "https://picsum.photos/640/426",
+      "price": "$49/MO",
+      "title": "Sed vehicula ligula quis consequat tincidunt.",
+      "description": "Vestibulum orci placerat non gravida vel imperdiet eget semagt...",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
+      "name": "LILLY CARVER",
+      "date": "JUL 21"
+    },
+    {
+      "id": 21,
+      "image": "https://picsum.photos/640/426",
+      "price": "$67/MO",
+      "title": "Fusce et nibh vestibulum ullamc lacinia ipsum.",
+      "description": "Nam justo aliquam sed lacus non gtojy convallis vulputate metus...",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "name": "LUKA WEAVERP",
+      "date": "DIC 21"
+    },
+    {
+      "id": 22,
+      "image": "https://picsum.photos/640/426",
+      "price": "$80/MO",
+      "title": "In non erat fringilla tristique massa  dictu eg.",
+      "description": "Morbi sed dui in mi imperdiet malesuada sit amet non augue gthuya...",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "name": "KYLEE HOLTTH",
+      "date": "SEP 21"
     }
   ]
 }

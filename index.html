@@ -8,7 +8,7 @@
   <link rel="shorcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   <title>Landkit</title>
 </head>
-<body>
+<body class="body">
   <header class="header js-sticky">
     <div class = "container">
       <div class = "flexbox">
@@ -31,24 +31,35 @@
     </div>
   </header>
 
-  <banner class="banner">
-    <div class="container">
-      <div class="search">
-        <div class="content">
-          <img class="content__icon" src="./assets/search.svg" alt="search icon"> 
-          <input class="content__text js-search" type="text" placeholder="Search">
-        </div>
-        <div class="results">
-          <label class="results__numbers js-totalResults"></label>
-          <a class = "results__link" href="#">Search</a>
-        </div>
+  <section class="banner container">
+    <div class="search">
+      <div class="search__content">
+        <img class="search__icon" src="./assets/search.svg" alt="search icon"> 
+        <input class="search__text js-search" type="text" placeholder="Search">
+      </div>
+      <div class="search__result">
+        <label class="search__counter js-totalResults"></label>
+        <a class = "search__link" href="#">Search</a>
       </div>
     </div>
-  </banner>
+  </section>
 
+  <!-- Section -->
 
-  <div class="articles"></div>
+  <section class="articles container">
+    <div class="card__container js-cardsContainer">
+    </div>
+    <div class="card__btn js-loadMoreBtn">
+      <a class="card__link" href="#">Load more</a>
+      <div class="card__follow">
+        <img class="card__arrow" src="./assets/arrow.png" alt="arrow-right">
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section -->
   
-  <script src="./js/index.js"></script>
+  <script defer src="./js/index.js"></script>
 </body>
 </html>
