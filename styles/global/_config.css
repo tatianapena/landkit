@@ -9,7 +9,7 @@
 .container {
   margin: 0 auto;
   max-width: 1300px;
-  padding: 0.55rem;
+  padding: 1rem;
 }
 
 @media (min-width: 640px) {
