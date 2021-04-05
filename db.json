@@ -60,7 +60,7 @@
       "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
       "name": "MARLEEN DAWS",
       "date": "MAY 21",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 6,
@@ -111,7 +111,8 @@
       "description": "Vestibulum orci neque placerat non gravidsd imperdiet eget sem...",
       "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
       "name": "LILLY CARVER",
-      "date": "JUL 21"
+      "date": "JUL 21",
+      "favorite": true
     },
     {
       "id": 11,

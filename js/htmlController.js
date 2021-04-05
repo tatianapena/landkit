@@ -1,4 +1,3 @@
-feature/article
 import {ArticleCard} from './components/articleCard.js';
 import {NoResults} from './components/noResults.js';
 import {FullArticle} from "./components/fullArticle.js";
