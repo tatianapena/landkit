@@ -1,3 +1,5 @@
+import {FullArticle} from "./components/fullArticle.js";
+
 
 function updateActiveLink(previousActiveElement, newActiveElement) {
     previousActiveElement.classList.replace("menu__link--active", "menu__link")
@@ -11,6 +13,24 @@ const domLoadedController = async (e) => {
         const isFavorite = e.detail.isFavorite();
         const article = e.detail.article()
         await articlesService.updateFavoriteArticle(article.id, isFavorite);
+    });
+
+    cardsContainer.addEventListener('expand', function (e) {
+        htmlRender.setFullArticle(e.detail.article());
+    });
+
+    cardsContainer.addEventListener('loadMore', async function (e) {
+        if (articlesBtn.classList.contains("menu__link--active")) {
+            await window.getAndRenderArticles();
+        } else {
+            const favorites = await articlesService.getFavoritesArticles();
+            htmlRender.renderArticlesCards(favorites, true);
+        }
+    });
+
+    contentSpaceContainer.addEventListener('back', async function (e) {
+        await getAndRenderArticles();
+        updateActiveLink(favoritesBtn, articlesBtn);
     });
 }
 
@@ -34,7 +54,7 @@ const clickLoadButtonController = async (e) => {
         await window.getAndRenderArticles();
     } else {
         const favorites = await articlesService.getFavoritesArticles();
-        htmlRender.renderArticlesCards(favorites);
+        htmlRender.renderArticlesCards(favorites, true);
     }
 }
 

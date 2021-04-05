@@ -1,4 +1,4 @@
-# :gear: LaslesVPN :gear:
+# :gear: Landkit :gear:
 
 ## Resources
 * [Fonts](https://css-tricks.com/snippets/css/using-font-face/): [Web Fonts](https://drive.google.com/file/d/1xfE30WF5E-1YuJJ9owwn6E9PIXadzYSv/view?usp=sharing) + [Font Pack](https://fonts.google.com/specimen/Roboto?preview.text_type=custom)
