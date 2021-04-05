@@ -38,7 +38,7 @@
       "avatar": "https://randomuser.me/api/portraits/women/3.jpg",
       "name": "ELLA FAYTAHE",
       "date": "MAR 21",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
@@ -60,7 +60,7 @@
       "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
       "name": "MARLEEN DAWS",
       "date": "MAY 21",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 6,

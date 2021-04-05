@@ -24,7 +24,7 @@
 
 - The SVG images was optimized with the following website: https://jakearchibald.github.io/svgomg/
 
-- The URL of the project is as follows: 
+- The URL of the project is as follows: https://landkit-project.netlify.app/
 
 
 ## Author :book:
