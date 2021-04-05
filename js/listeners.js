@@ -1,5 +1,6 @@
 import {FullArticle} from "./components/fullArticle.js";
 
+
 function updateActiveLink(previousActiveElement, newActiveElement) {
     previousActiveElement.classList.replace("menu__link--active", "menu__link")
     newActiveElement.classList.replace("menu__link", "menu__link--active")

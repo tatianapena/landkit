@@ -12,6 +12,7 @@ window.articlesBtn = document.querySelector("a.js-articlesBtn");
 window.cardsContainer = document.querySelector(".js-cardsContainer");
 window.contentSpaceContainer = document.querySelector(".js-contentSpace");
 
+
 window.articlesService = new apiService.ArticlesService();
 window.htmlRender = new html.HtmlController(cardsContainer, result);
 
@@ -26,4 +27,5 @@ searchInput.addEventListener('input', async (e) => { await listeners.searchInput
 // loadButton.addEventListener('click', async (e) => { await listeners.clickLoadButtonController(e); });
 favoritesBtn.addEventListener('click', async (e) => { await listeners.favoritesBtnController(e); });
 articlesBtn.addEventListener('click', async (e) => { await listeners.articlesBtnController(e); });
+
 
