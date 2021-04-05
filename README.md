@@ -26,6 +26,8 @@
 
 - The URL of the project is as follows: https://landkit-project.netlify.app/
 
+- To run it, should write the follow comand on your console/terminal: json-server --watch db.json
+
 
 ## Author :book:
 **Tatiana Peña** :computer: :woman: 
