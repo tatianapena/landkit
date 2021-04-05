@@ -49,7 +49,7 @@
       "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
       "name": "JERROD BRAND",
       "date": "APR 21",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 5,
@@ -60,7 +60,7 @@
       "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
       "name": "MARLEEN DAWS",
       "date": "MAY 21",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 6,

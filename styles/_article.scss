@@ -32,12 +32,11 @@
     display: flex;
     flex-direction: column;
   }
-  &__avatar {
-    border-radius: 50%;
-    max-width: 36px;
-  }
   &__girl-smiling {
     display: block;
+    display: block;
+    border-radius: 50%;
+    max-width: 23.06px;
   }
   &__name {
     margin-top: 5px;
@@ -155,7 +154,7 @@
       font-size: 17px;
     }
     &__social {
-      margin-left: 16rem;
+      margin-left: 17rem;
     }
     &__sign {
       display: flex;

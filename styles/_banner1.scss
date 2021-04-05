@@ -10,6 +10,17 @@
     display: flex;
     cursor: pointer;
   }
+  &__counter {
+    color: $light-gray;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    margin-right: 20px;
+  }
   &__text {
     outline: none;
     border: none;
@@ -24,9 +35,6 @@
   &__result {
     display: flex;
     cursor: pointer;
-  }
-  &__counter {
-    display: none;
   }
   &__link {
     display: block;
@@ -56,17 +64,6 @@
     }
     &__content {
       width: 80%;
-    }
-    &__counter {
-      color: $light-gray;
-      font-weight: 900;
-      font-size: 10px;
-      line-height: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      display: block;
-      margin: auto;
-      margin-right: 20px;
     }
   }
 }
