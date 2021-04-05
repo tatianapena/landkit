@@ -19,6 +19,7 @@ export class HtmlController {
     renderArticlesCards(articlesData, appendArticles = false) {
         if (!appendArticles) {
             this.cardsContainer.innerHTML = '';
+            console.log('resety')
         }
 
         if (articlesData.length === 0) {
@@ -90,5 +91,3 @@ export class HtmlController {
         this.searchContainer.style.display = visible ? "block" : "none";
     }
 }
-
-        

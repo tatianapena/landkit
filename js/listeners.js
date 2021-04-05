@@ -1,5 +1,3 @@
-import {FullArticle} from "./components/fullArticle.js";
-
 
 function updateActiveLink(previousActiveElement, newActiveElement) {
     previousActiveElement.classList.replace("menu__link--active", "menu__link")
@@ -24,7 +22,7 @@ const domLoadedController = async (e) => {
             await window.getAndRenderArticles();
         } else {
             const favorites = await articlesService.getFavoritesArticles();
-            htmlRender.renderArticlesCards(favorites, true);
+            htmlRender.renderArticlesCards(favorites, false);
         }
     });
 
@@ -32,9 +30,19 @@ const domLoadedController = async (e) => {
         await getAndRenderArticles();
         updateActiveLink(favoritesBtn, articlesBtn);
     });
+
+
+    searchInput.addEventListener('input', async (e) => { await searchInputController(e); });
+// loadButton.addEventListener('click', async (e) => { await listeners.clickLoadButtonController(e); });
+    favoritesBtn.addEventListener('click', async (e) => { await favoritesBtnController(e); });
+    articlesBtn.addEventListener('click', async (e) => { await articlesBtnController(e); });
 }
 
 const scrollController = (e) => {
+    if (htmlRender.articlesData.length <= 3) {
+        return;
+    }
+
     const sticky = stickyHeader.offsetTop;
     if (window.pageYOffset > sticky) {
         stickyHeader.classList.add("sticky");
@@ -66,7 +74,7 @@ const favoritesBtnController = async (e) => {
 
     updateActiveLink(articlesBtn, favoritesBtn);
     const favorites = await articlesService.getFavoritesArticles(true);
-    htmlRender.renderArticlesCards(favorites);
+    htmlRender.renderArticlesCards(favorites, false);
 }
 
 const articlesBtnController = async (e) => {

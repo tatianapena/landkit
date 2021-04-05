@@ -12,7 +12,6 @@ window.articlesBtn = document.querySelector("a.js-articlesBtn");
 window.cardsContainer = document.querySelector(".js-cardsContainer");
 window.contentSpaceContainer = document.querySelector(".js-contentSpace");
 
-
 window.articlesService = new apiService.ArticlesService();
 window.htmlRender = new html.HtmlController(cardsContainer, result);
 
@@ -23,9 +22,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     await listeners.domLoadedController(e);
 });
 
-searchInput.addEventListener('input', async (e) => { await listeners.searchInputController(e); });
-// loadButton.addEventListener('click', async (e) => { await listeners.clickLoadButtonController(e); });
-favoritesBtn.addEventListener('click', async (e) => { await listeners.favoritesBtnController(e); });
-articlesBtn.addEventListener('click', async (e) => { await listeners.articlesBtnController(e); });
-
-
+// searchInput.addEventListener('input', async (e) => { await listeners.searchInputController(e); });
+// // loadButton.addEventListener('click', async (e) => { await listeners.clickLoadButtonController(e); });
+// favoritesBtn.addEventListener('click', async (e) => { await listeners.favoritesBtnController(e); });
+// articlesBtn.addEventListener('click', async (e) => { await listeners.articlesBtnController(e); });

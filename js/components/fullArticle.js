@@ -18,7 +18,7 @@ class FullArticle {
                <div class="article__info">
                   <div class="article__sign">
                      <div class="article__avatar">
-                        <img class="article__portrait" src="${article.avatar}" alt="avatar picture">
+                        <img class="article__girl-smiling" src="${article.avatar}" alt="avatar picture">
                      </div>
                      <div class="article__published">
                         <p class="article__name">${article.name}</p>
